@@ -10,7 +10,7 @@ const CustomInput = ( {
     label,
     secureTextEntry = false,
     keyboardType="default"
-                      }:CustomInputProps) => {
+}:CustomInputProps) => {
     const [isFocused, setIsFocused] =useState(false);
 
     return (
@@ -28,9 +28,6 @@ const CustomInput = ( {
                 placeholder={placeholder}
                 placeholderTextColor="#888"
                 className={cn('input', isFocused ? 'border-primary' : 'border-gray-300')}
-
-
-
 
             />
         </View>

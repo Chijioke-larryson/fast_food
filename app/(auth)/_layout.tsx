@@ -14,30 +14,21 @@ export default function _Layout() {
         <KeyboardAvoidingView behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
             <ScrollView className="bg-white h-full" keyboardShouldPersistTaps="handled" >
 
-                <view className="w-full relative" style={{height: Dimensions.get("screen").height /2.25}}>
+                <View className="w-full relative" style={{height: Dimensions.get('screen').height /2.25}}>
                     <ImageBackground source={images.loginGraphic} className="size-full rounded-b-lg" resizeMode="stretch" />
 
-                </view>
+                </View>
 
                 <View className="w-full relative" style={{height: Dimensions.get("screen").height /2.25}}>
                     <ImageBackground source={images.loginGraphic} className="size-full rounded-b-lg" resizeMode="stretch" />
                     <Image source={images.logo} className="self-center size-48 absolute -bottom-16 z-10" />
 
                 </View>
-                <CustomInput
-                    placeholder="enter your email"
-                    value={' '}
-                    onChangeText={(text) =>{}}
-                    label="Email"
-                    keyboardType="email-address"
 
-                />
-                <CustomButton />
-
+                <Slot />
 
 
             </ScrollView>
-            <Slot />
 
         </KeyboardAvoidingView>
 
